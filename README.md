@@ -1,5 +1,5 @@
 ```text
-Create a tor and socks5 hashed password, run this command in the terminal. 
+Create a tor and socks5 hashed password, run this command in the terminal: 
 ```
 
 ```bash
@@ -7,12 +7,11 @@ tor --hash-password your-password-here
 ```
 
 ```text
-copy the hash (this number from the output example=8F:97579857886764747457337) and paste it where it belongs in the torrc file, save and close text editor. 
-Run this file from the terminal: 
+copy the hash (this number from the output example=8F:97579857886764747457337) and paste it where it belongs in the torrc file, save and close text editor.  
 ```
 
 ```text
-To start the Tor network configuration file, run this command in the terminal.
+To start the Tor network configuration file, run this command in the terminal:
 ```
 
 ```bash
