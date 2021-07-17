@@ -1,4 +1,3 @@
-## Rename this file torrc ##
 ```text
 Create a tor and socks5 hashed password: 
 ```
@@ -12,12 +11,15 @@ copy the hash (this number from the output example=8F:97579857886764747457337) a
 Run this file from the terminal: 
 ```
 
+```text
+To start the Tor network configuration file, run this command in the terminal.
+```
+
 ```bash
 tor RunAsDaemon 1 -f /etc/tor/torrc & 
 ``` 
 
 ```text
-(starts and push's command to background). 
 To stop tor and go back to normal network configuration; run this command in the terminal: 
 ```
 
@@ -29,6 +31,8 @@ killall tor
 A safer & faster Tor network configuration.
 Tip: Use that hashed password when using "nyx" a terminal tool for tor; a command & control monitor/station. Not the hash, the password used to make the hashed password, the hash is just for this configuration file.
 ```
+
+# This section is the torrc file that must be placed in /ect/tor/torrc
 
 ```text
 VirtualAddrNetwork 10.192.0.0/10
