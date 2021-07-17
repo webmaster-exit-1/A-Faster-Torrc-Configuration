@@ -1,5 +1,5 @@
 ```text
-Create a tor and socks5 hashed password: 
+Create a tor and socks5 hashed password, run this command in the terminal. 
 ```
 
 ```bash
