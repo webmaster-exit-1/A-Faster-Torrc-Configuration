@@ -7,7 +7,7 @@ tor --hash-password your-password-here
 ```
 
 ```text
-copy the hash (this number from the output example=8F:97579857886764747457337) and paste it where it belongs in the torrc file, save and close text editor.  
+copy the hash (this number from the output example=8F:97579857886764747457337) and paste it where it belongs in the torrc file (the part below that's all X's), save and close text editor.  
 ```
 
 ```text
