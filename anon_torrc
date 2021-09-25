@@ -1,0 +1,19 @@
+VirtualAddrNetwork 10.192.0.0/10
+AutomapHostsOnResolve 1
+AutomapHostsSuffixes .exit,.onion
+TransPort 127.0.0.1:9040 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+ControlPort 9051
+HashedControlPassword XX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+DNSPort 9053
+Sandbox 1
+HardwareAccel 1
+TestSocks 1
+AllowNonRFC953Hostnames 0
+WarnPlaintextPorts 23,109,110,143,80
+ClientRejectInternalAddresses 1
+NewCircuitPeriod 40
+MaxCircuitDirtiness 600
+MaxClientCircuitsPending 48
+UseEntryGuards 1
+EnforceDistinctSubnets 1
