@@ -4,7 +4,7 @@ AutomapHostsSuffixes .exit,.onion
 TransPort 127.0.0.1:9040 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 ControlPort 9051
-HashedControlPassword XX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+HashedControlPassword 16:62DC7BAC07B6061F608633622AC4A2683E1598AE899448A1353ACF85C4
 DNSPort 9053
 Sandbox 1
 HardwareAccel 1
@@ -17,3 +17,7 @@ MaxCircuitDirtiness 600
 MaxClientCircuitsPending 48
 UseEntryGuards 1
 EnforceDistinctSubnets 1
+DataDirectoryGroupReadable 1
+CookieAuthentication 1
+CookieAuthFileGroupReadable 1
+CookieAuthFile /var/lib/tor/control_auth_cookie
