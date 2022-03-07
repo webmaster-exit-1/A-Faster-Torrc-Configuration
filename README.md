@@ -1,4 +1,4 @@
-# A faster tor configuration
+# A Faster/Safer TOR Configuration
 
 First thing is to have tor installed via your distro's package manager; whether it is apt for debian and its derivatives or pacman for arch and its derivatives.
 Not to be confused with tor-browser, that's a different package and not what we are doing here.
