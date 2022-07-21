@@ -14,7 +14,7 @@ tor --hash-password [hint]("your password here")
 * To start the Tor network configuration file, run this command in the terminal:
 
 ```bash
-tor RunAsDaemon 1 -f /etc/tor/torrc &
+sudo -u tor tor RunAsDaemon 1 -f /etc/tor/torrc &
 ```
 
 * To stop tor and go back to normal network configuration; run this command in the terminal:
