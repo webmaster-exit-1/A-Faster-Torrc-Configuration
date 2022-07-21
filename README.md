@@ -50,3 +50,4 @@ MaxClientCircuitsPending 48
 UseEntryGuards 1
 EnforceDistinctSubnets 1
 ```
+Add as many socks5 ports as needed following the same method.
