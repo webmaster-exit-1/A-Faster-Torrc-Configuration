@@ -14,7 +14,7 @@
     * To start the Tor network with the new configuration file, run this after copying it to /etc/tor/torrc:<br>
 
 ```bash
-  sudo -u tor tor RunAsDaemon 1 -f /etc/tor/torrc &
+sudo -u tor tor RunAsDaemon 1 -f /etc/tor/torrc &
 ```
 
     * To stop tor and go back to normal network configuration; run this command in the terminal:<br>
@@ -53,3 +53,4 @@
   <u><b>Tip 1</b></u>: Use that hashed password when using "nyx" a terminal tool for tor; a command & control monitor/station. Not the hash, the password used to make the hash. The hash is just for this configuration file.<br>
 
   <u><b>Tip 2</b></u>: It is also a good idea to rename the default torrc with the suffix .bak to keep as your backup configuration file instead of overwriting it.
+Add as many socks5 ports as needed following the same method.
