@@ -14,7 +14,7 @@
  Also make sure to comment out any ports you don't need. Ports that wont be used.
 
   ```bash
-  sudo -S -u tor tor RunAsDaemon 1 -f /etc/tor/torrc & # By adding "&" we can run this in the background.
+  sudo -S -u tor tor RunAsDaemon 1 -f /etc/tor/torrc & # By adding "&" this will run in the background.
   ```
 
  To stop tor and return to the normal network configuration.
