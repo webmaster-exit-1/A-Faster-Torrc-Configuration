@@ -9,9 +9,9 @@
   tor --hash-password "Write your password here!"
   ```
 
- To start the Tor network in system-wide mode (all connections run through tor) with the new configuration file.
- To start the Tor network on a per port number basis, leave out: **RunAsDaemon 1**.
- Also make sure to comment out any ports you don't need. Ports that wont be used.
+To start the Tor network in system-wide mode (all connections run through tor).
+To start the Tor network on a per port number basis, leave out: **RunAsDaemon 1**.
+Also make sure to comment out any ports you don't need. Ports that wont be used.
 
   ```bash
   sudo -S -u tor tor RunAsDaemon 1 -f /etc/tor/torrc & #By adding "&" this will run in the background.
