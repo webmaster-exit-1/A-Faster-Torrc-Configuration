@@ -1,31 +1,30 @@
 <!-- markdownlint-disable -->
 <h1>A Faster/Safer TOR Configuration</h1><br>
 
-  <h4>Not to be confused with tor-browser, that's a different package and not what we are doing here.</h4><br>
+  <h5>Not to be confused with tor-browser, that's a different package and not what we are doing here.</h5><br>
 
- Create a tor socks5 hashed password. Run this command in the terminal:
+ Create a password for **tor** and save the password's **hash** in the **torrc** file.
 
   ```bash
   tor --hash-password "Write your password here!"
   ```
 
- Copy the hash (this number from the output of the command above example=8F:97579857886764747457337)
- And paste it where it belongs in the torrc file (the part below that's all X's).
- Save and close text editor.
-
- To start the Tor network with the new configuration file, run this after copying it to /etc/tor/torrc:
+ To start the Tor network in system-wide mode (all connections run through tor) with the new configuration file.
+ To start the Tor network on a per port number basis, leave out: **RunAsDaemon 1**.
+ Also make sure to comment out any ports you don't need. Ports that wont be used.
 
   ```bash
   sudo -S -u tor tor RunAsDaemon 1 -f /etc/tor/torrc & # By adding "&" we can run this in the background.
   ```
 
- To stop tor and go back to normal network configuration; run this command in the terminal:
+ To stop tor and return to the normal network configuration.
 
   ```bash
   sudo killall tor
   ```
 
  The Torrc File.
+
   ```conf
   VirtualAddrNetwork 10.192.0.0/10
   AutomapHostsOnResolve 1
