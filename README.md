@@ -9,9 +9,9 @@
   tor --hash-password "Write your password here!"
   ```
 
-To start the Tor network in system-wide mode (all connections run through tor).
-To start the Tor network on a per port number basis, leave out: **RunAsDaemon 1**.
-Also make sure to comment out any ports you don't need. Ports that wont be used.
+<p>To start the Tor network in system-wide mode (all connections run through tor).<br>
+To start the Tor network on a per port number basis, leave out: <b>RunAsDaemon 1</b>.<br>
+Also make sure to comment out any ports you don't need. Ports that wont be used.</p>
 
   ```bash
   sudo -S -u tor tor RunAsDaemon 1 -f /etc/tor/torrc & #By adding "&" this will run in the background.
@@ -52,15 +52,15 @@ Also make sure to comment out any ports you don't need. Ports that wont be used.
   EnforceDistinctSubnets 1
   ```
 
-  <u><b>**Tip 1**</b></u>: When using <b><u>nyx</b></u> (A cli command & control monitor/station for your tor connections).
-  Use the <b>password</b> you used to make the <b>hash</b> in the <b>torrc</b> file to sign in.
-  The <b>hash</b> created from the <b>password</b> is just for the <b>torrc</b> configuration file.<br>
+  <p><u><b>Tip 1</b></u>: When using <b><u>nyx</b></u> (A cli command & control monitor/station for your tor connections).<br>
+  Use the <b>password</b> you used to make the <b>hash</b> in the <b>torrc</b> file to sign in.<br>
+  The <b>hash</b> created from the <b>password</b> is just for the <b>torrc</b> configuration file.</p>
 
-  <u><b>**Tip 2**</b></u>: It is also a good idea to rename the default <b>/etc/tor/torrc</b> with the suffix <b>.bak</b> to keep as your backup configuration file instead of overwriting it. ex.: <b>/etc/tor/torrc.bak</b>
+  <p><u><b>Tip 2</b></u>: It is also a good idea to rename the default <b>/etc/tor/torrc</b> with the suffix <b>.bak</b> to keep as your backup configuration file instead of overwriting it. ex.: <b>/etc/tor/torrc.bak</b></p>
 
-  <u><b>**Tip 3**</b></u>: Add as many socks5 ports as needed following the same syntax as in the <b>torrc</b> file.
-  For instance. Perhapse you want to run four specific programs and want each of them running there internet connection via tor.
-  You would make four socks5 ports available for them in the <b>torrc</b> file, like this.<br>
+  <p><u><b>Tip 3</b></u>: Add as many socks5 ports as needed following the same syntax as in the <b>torrc</b> file.<br>
+  For instance. Perhapse you want to run four specific programs and want each of them running there internet connection via tor.<br>
+  You would make four socks5 ports available for them in the <b>torrc</b> file, like this.</p>
 
   ```
   SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
