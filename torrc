@@ -3,9 +3,10 @@ AutomapHostsOnResolve 1
 AutomapHostsSuffixes .exit,.onion
 TransPort 127.0.0.1:9040 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
-SocksPort 127.0.0.1:9055 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
-SocksPort 127.0.0.1:9060 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
-SocksPort 127.0.0.1:9065 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+## Uncomment the following socks5 ports to make them available if needed
+#SocksPort 127.0.0.1:9055 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+#SocksPort 127.0.0.1:9060 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
+#SocksPort 127.0.0.1:9065 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 #SocksPort 127.0.0.1:9070 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 #SocksPort 127.0.0.1:9075 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 #SocksPort 127.0.0.1:9080 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
@@ -27,6 +28,7 @@ MaxClientCircuitsPending 48
 UseEntryGuards 1
 EnforceDistinctSubnets 1
 DataDirectoryGroupReadable 1
+## Uncomment the following to use cookie authentication and comment out the HashedControlPassword
 #CookieAuthentication 1
 #CookieAuthFileGroupReadable 1
 #CookieAuthFile /var/lib/tor/control_auth_cookie
