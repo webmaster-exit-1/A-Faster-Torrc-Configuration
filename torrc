@@ -14,6 +14,7 @@ SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtoco
 #SocksPort 127.0.0.1:9090 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 #SocksPort 127.0.0.1:9095 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
 ControlPort 9051
+## Add the hash from the password created for tor here
 HashedControlPassword XX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
 DNSPort 9053
 Sandbox 1
