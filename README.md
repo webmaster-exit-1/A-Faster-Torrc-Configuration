@@ -1,7 +1,8 @@
 <!-- markdownlint-disable -->
 <h1>A Faster/Safer TOR Configuration</h1><br>
+  <h3><b>NOTE:</b> Not to be confused with <b>tor-browser</b>, that's a different package and not what we are doing here.</h3><br>
 
-  <h5>Not to be confused with tor-browser, that's a different package and not what we are doing here.</h5><br>
+# 
 
  Create a password for **tor** and save the password's **hash** in the **torrc** file.
 
@@ -9,12 +10,16 @@
   tor --hash-password "Write your password here!"
   ```
 
-<p>To start the Tor network in system-wide mode (all connections run through tor).<br>
-To start the Tor network on a per port number basis, leave out: <b>RunAsDaemon 1</b>.<br>
-Also make sure to comment out any ports you don't need. Ports that wont be used.</p>
+ Optional:
+  - Create a directory for user configs
+  
+  ```bash
+  sudo mkdir -p /etc/tor/torrc.d
+  ```
+ To start tor with user config
 
   ```bash
-  sudo -S -u tor tor RunAsDaemon 1 -f /etc/tor/torrc & #By adding "&" this will run in the background.
+  tor RunAsDaemon 1 -f /etc/tor/torrc.d/better_torrc
   ```
 
  To stop tor and return to the normal network configuration.
@@ -23,7 +28,7 @@ Also make sure to comment out any ports you don't need. Ports that wont be used.
   sudo killall tor
   ```
 
- The Torrc File.
+ The `better_torrc` File.
 
   ```conf
   VirtualAddrNetwork 10.192.0.0/10
@@ -37,7 +42,7 @@ Also make sure to comment out any ports you don't need. Ports that wont be used.
   # SocksPort 127.0.0.1:9085 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
   # ------------------------------------------------------------------------------------------------------------------
   ControlPort 9051
-  HashedControlPassword XX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  HashedControlPassword **(created from the `tor --hash-password` command)**
   DNSPort 9053
   Sandbox 1
   HardwareAccel 1
@@ -52,15 +57,18 @@ Also make sure to comment out any ports you don't need. Ports that wont be used.
   EnforceDistinctSubnets 1
   ```
 
-  <p><u><b>Tip 1</b></u>: When using <b><u>nyx</b></u> (A cli command & control monitor/station for your tor connections).<br>
-  Use the <b>password</b> you used to make the <b>hash</b> in the <b>torrc</b> file to sign in.<br>
-  The <b>hash</b> created from the <b>password</b> is just for the <b>torrc</b> configuration file.</p>
+<u><b>Tip 1</b></u>:<br>
+  - When using <b><u>nyx</b></u> (A cli command & control monitor/station for your tor connections).<br>
+    - Use the <b>password</b> you used to make the <b>hash</b> in the `better_torrc` file to sign in.<br> 
+      - The <b>hash</b> created from the <b>password</b> is just for the `better_torrc` configuration file.<br>
 
-  <p><u><b>Tip 2</b></u>: It is also a good idea to rename the default <b>/etc/tor/torrc</b> with the suffix <b>.bak</b> to keep as your backup configuration file instead of overwriting it. ex.: <b>/etc/tor/torrc.bak</b></p>
+<u><b>Tip 2</b></u>:<br> 
+  - It is also a good idea to create a `torrc.d` user config folder rather than overwriting the default config `torrc`.<br>
 
-  <p><u><b>Tip 3</b></u>: Add as many socks5 ports as needed following the same syntax as in the <b>torrc</b> file.<br>
-  For instance. Perhapse you want to run four specific programs and want each of them running there internet connection via tor.<br>
-  You would make four socks5 ports available for them in the <b>torrc</b> file, like this.</p>
+<u><b>Tip 3</b></u>:<br>
+  - Add as many socks5 isolated port addresses as needed following the same syntax as in the commented line in the code block above.<br>
+    - For instance. Perhapse you want to run four specific programs and want each of them running there internet connection via tor.<br>
+      - You would make four isolated socks5 addresses with different ports available for them in the `better_torrc` file, like this.<br>
 
   ```
   SocksPort 127.0.0.1:9050 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
@@ -69,5 +77,5 @@ Also make sure to comment out any ports you don't need. Ports that wont be used.
   SocksPort 127.0.0.1:9080 IsolateClientAddr IsolateSOCKSAuth IsolateClientProtocol IsolateDestPort IsolateDestAddr
   ```
 
- And now each of those four programs would use one of each of these four port numbers provided by your `torrc` file: **9050**, **9060**, **9070**, & **9080**.
+  - And now each of those four programs would use one of each of these four new socks5 addresses and port numbers provided by your `better_torrc`.
 
