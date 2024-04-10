@@ -70,7 +70,9 @@ This configuration includes additional settings to optimize speed and security:
 
 - AvoidDiskWrites: Enables the avoid disk writes feature, which reduces disk I/O and improves performance.
 - FascistFirewall: Enables the fascist firewall feature, which blocks all outgoing connections except for those explicitly allowed.
-- Socks5DestroyLocalAddresses, Socks5DestroyLocalPorts, Socks5DestroyLocalDomain: 
+- > Socks5DestroyLocalAddresses,       
+    Socks5DestroyLocalPorts, 
+    Socks5DestroyLocalDomain: 
   - Destroys local information in SOCKS5 requests, which improves anonymity.
 - DataDirectory: Specifies the directory where Tor will store its data files, which can help to prevent unauthorized access.
 
