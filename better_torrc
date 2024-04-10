@@ -37,7 +37,3 @@ DataDirectoryGroupReadable 1
 # Additional Settings for Speed and Security
 AvoidDiskWrites 1
 FascistFirewall 1
-Socks5DestroyLocalAddresses 1
-Socks5DestroyLocalPorts 1
-Socks5DestroyLocalDomain 1
-DataDirectory /var/lib/tor
