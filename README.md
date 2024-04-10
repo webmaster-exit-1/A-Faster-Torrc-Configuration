@@ -19,7 +19,7 @@
  To start tor with user config
 
   ```bash
-  tor RunAsDaemon 1 -f /etc/tor/torrc.d/better_torrc
+  tor -f /etc/tor/torrc.d/better_torrc
   ```
 
  To stop tor and return to the normal network configuration.
