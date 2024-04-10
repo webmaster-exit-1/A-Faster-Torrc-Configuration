@@ -66,7 +66,11 @@
   DataDirectory /var/lib/tor
   ```
 
+#
+
 This configuration includes additional settings to optimize speed and security:
+
+#
 
 - AvoidDiskWrites: Enables the avoid disk writes feature, which reduces disk I/O and improves performance.
 - FascistFirewall: Enables the fascist firewall feature, which blocks all outgoing connections except for those explicitly allowed.
