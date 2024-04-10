@@ -55,7 +55,23 @@
   MaxClientCircuitsPending 48
   UseEntryGuards 1
   EnforceDistinctSubnets 1
+
+  # Additional Settings for Speed and Security
+
+  AvoidDiskWrites 1
+  FascistFirewall 1
+  Socks5DestroyLocalAddresses 1
+  Socks5DestroyLocalPorts 1
+  Socks5DestroyLocalDomain 1
+  DataDirectory /var/lib/tor
   ```
+
+This configuration includes additional settings to optimize speed and security:
+
+- AvoidDiskWrites: Enables the avoid disk writes feature, which reduces disk I/O and improves performance.
+- FascistFirewall: Enables the fascist firewall feature, which blocks all outgoing connections except for those explicitly allowed.
+- Socks5DestroyLocalAddresses, Socks5DestroyLocalPorts, Socks5DestroyLocalDomain: - Destroys local information in SOCKS5 requests, which improves anonymity.
+- DataDirectory: Specifies the directory where Tor will store its data files, which can help to prevent unauthorized access.
 
 <u><b>Tip 1</b></u>:<br>
   - When using <b><u>nyx</b></u> (A cli command & control monitor/station for your tor connections).<br>
