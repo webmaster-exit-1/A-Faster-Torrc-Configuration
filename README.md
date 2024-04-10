@@ -105,7 +105,7 @@ This configuration includes additional settings to optimize speed and security:
   - And now each of those four programs would use one of each of these four new socks5 addresses and port numbers provided by your `better_torrc`.
 
 
-## Below is an explanation of each configuration option.
+## Below is an explanation of each configuration option aside the previousley explained speed and security additional settings.
 
 1. VirtualAddrNetwork: Sets the range of IP addresses used for virtual circuits. The range 10.192.0.0/10 is used.
 
