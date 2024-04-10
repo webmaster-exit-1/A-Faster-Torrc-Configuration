@@ -73,7 +73,7 @@ This configuration includes additional settings to optimize speed and security:
 -  - Socks5DestroyLocalAddresses,       
    - Socks5DestroyLocalPorts, 
    - Socks5DestroyLocalDomain: 
-  - Destroys local information in SOCKS5 requests, which improves anonymity.
+     - Destroys local information in SOCKS5 requests, which improves anonymity.
 - DataDirectory: Specifies the directory where Tor will store its data files, which can help to prevent unauthorized access.
 
 <u><b>Tip 1</b></u>:<br>
