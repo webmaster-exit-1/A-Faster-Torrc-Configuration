@@ -34,3 +34,10 @@ DataDirectoryGroupReadable 1
 # CookieAuthentication 1
 # CookieAuthFileGroupReadable 1
 # CookieAuthFile /var/lib/tor/control_auth_cookie
+# Additional Settings for Speed and Security
+AvoidDiskWrites 1
+FascistFirewall 1
+Socks5DestroyLocalAddresses 1
+Socks5DestroyLocalPorts 1
+Socks5DestroyLocalDomain 1
+DataDirectory /var/lib/tor
