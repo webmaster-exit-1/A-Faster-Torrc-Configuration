@@ -80,6 +80,8 @@ This configuration includes additional settings to optimize speed and security:
      - Destroys local information in SOCKS5 requests, which improves anonymity.
 - DataDirectory: Specifies the directory where Tor will store its data files, which can help to prevent unauthorized access.
 
+#
+
 <u><b>Tip 1</b></u>:<br>
   - When using <b><u>nyx</b></u> (A cli command & control monitor/station for your tor connections).<br>
     - Use the <b>password</b> you used to make the <b>hash</b> in the `better_torrc` file to sign in.<br> 
