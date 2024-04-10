@@ -110,43 +110,43 @@
 
 #
 
-1. VirtualAddrNetwork: Sets the range of IP addresses used for virtual circuits. The range 10.192.0.0/10 is used.
+1. <b>VirtualAddrNetwork<b/>: Sets the range of IP addresses used for virtual circuits. The range 10.192.0.0/10 is used.
 
-2. AutomapHostsOnResolve: Enables automatic mapping of .onion and .exit hostnames to IPv6 addresses.
+2. <b>AutomapHostsOnResolve<b/>: Enables automatic mapping of .onion and .exit hostnames to IPv6 addresses.
 
-3. AutomapHostsSuffixes: Specifies the suffixes that trigger the automatic mapping of hostnames.
+3. <b>AutomapHostsSuffixes<b/>: Specifies the suffixes that trigger the automatic mapping of hostnames.
 
-4. TransPort: Configures the port used for incoming connections and applies isolation policies.
+4. <b>TransPort<b/>: Configures the port used for incoming connections and applies isolation policies.
 
-5. SocksPort: Configures the port used for outgoing SOCKS connections and applies isolation policies.
+5. <b>SocksPort<b/>: Configures the port used for outgoing SOCKS connections and applies isolation policies.
 
-6. ControlPort: Enables the control port for Tor's command-line interface.
+6. <b>ControlPort<b/>: Enables the control port for Tor's command-line interface.
 
-7. HashedControlPassword: The hashed password for the control port. This should be generated using the `tor --hash-password` command.
+7. <b>HashedControlPassword<b/>: The hashed password for the control port. This should be generated using the `tor --hash-password` command.
 
-8. DNSPort: Configures the port used for DNS queries.
+8. <b>DNSPort<b/>: Configures the port used for DNS queries.
 
-9. Sandbox: Enables the sandboxing feature to prevent Tor from accessing external resources.
+9. <b>Sandbox<b/>: Enables the sandboxing feature to prevent Tor from accessing external resources.
 
-10. HardwareAccel: Enables hardware acceleration for improved performance.
+10. <b>HardwareAccel<b/>: Enables hardware acceleration for improved performance.
 
-11. TestSocks: Enables testing of SOCKS connections.
+11. <b>TestSocks<b/>: Enables testing of SOCKS connections.
 
-12. AllowNonRFC953Hostnames: Allows non-RFC953 compliant hostnames.
+12. <b>AllowNonRFC953Hostnames<b/>: Allows non-RFC953 compliant hostnames.
 
-13. WarnPlaintextPorts: Warns about plaintext ports that could be used for traffic analysis.
+13. <b>WarnPlaintextPorts<b/>: Warns about plaintext ports that could be used for traffic analysis.
 
-14. ClientRejectInternalAddresses: Rejects connections to internal addresses.
+14. <b>ClientRejectInternalAddresses<b/>: Rejects connections to internal addresses.
 
-15. NewCircuitPeriod: Sets the time period for creating new circuits.
+15. <b>NewCircuitPeriod<b/>: Sets the time period for creating new circuits.
 
-16. MaxCircuitDirtiness: Sets the maximum time a circuit can be unused before being closed.
+16. <b>MaxCircuitDirtiness<b/>: Sets the maximum time a circuit can be unused before being closed.
 
-17. MaxClientCircuitsPending: Sets the maximum number of pending circuits allowed per client.
+17. <b>MaxClientCircuitsPending<b/>: Sets the maximum number of pending circuits allowed per client.
 
-18. UseEntryGuards: Enables the use of entry guards to protect against routing attacks.
+18. <b>UseEntryGuards<b/>: Enables the use of entry guards to protect against routing attacks.
 
-19. EnforceDistinctSubnets: Enforces the use of distinct subnets for each circuit.
+19. <b>EnforceDistinctSubnets<b/>: Enforces the use of distinct subnets for each circuit.
 
 To add more socks ports, follow the example provided in the comments.
 
